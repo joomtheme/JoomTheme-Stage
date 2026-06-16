@@ -1,1 +1,23 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<changelogs>
+    <changelog>
+        <element>mod_jtarticlexpro</element>
+        <type>module</type>
+        <version>1.0.11</version>
+        <fix>
+            <item>Added GPL-compatible license headers to all PHP files for JED Checker compatibility.</item>
+        </fix>
+        <change>
+            <item>Added Joomla update server URL to the extension manifest.</item>
+            <item>Added Joomla changelog URL to the extension manifest.</item>
+        </change>
+    </changelog>
+    <changelog>
+        <element>mod_jtarticlexpro</element>
+        <type>module</type>
+        <version>1.0.10</version>
+        <fix>
+            <item>Fixed Featured Badge rendering inside Bootstrap ratio wrappers.</item>
+        </fix>
+    </changelog>
+</changelogs>
