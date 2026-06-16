@@ -315,26 +315,25 @@ mod_jtarticlexpro.sys.ini
 
 ## 📸 Screenshots
 
-Add your screenshots to the repository and reference them here.
+### Magazine Layout
 
-Example:
-
-```markdown
 ![Magazine Layout](screenshots/magazine-layout.png)
+
+### Featured + List Layout
+
+![Featured + List Layout](screenshots/featured-list-layout.png)
+
+### Carousel Layout
+
 ![Carousel Layout](screenshots/carousel-layout.png)
-![Featured List Layout](screenshots/featured-list-layout.png)
-```
 
-Recommended screenshot folder:
+### Grid Layout
 
-```text
-screenshots/
-├── carousel-layout.png
-├── grid-layout.png
-├── compact-list-layout.png
-├── featured-list-layout.png
-└── magazine-layout.png
-```
+![Grid Layout](screenshots/grid-layout.png)
+
+### Compact List Layout
+
+![Compact List Layout](screenshots/compact-list-layout.png)
 
 ---
 
