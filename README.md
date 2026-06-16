@@ -1,1 +1,1 @@
-# JoomTheme-Stage
+# JT-ArticleX-Pro-Module
