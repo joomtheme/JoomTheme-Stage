@@ -333,7 +333,7 @@ And much more...
 
 ## 📝 Changelog
 
-### v1.0.11
+### v1.0.13
 
 * Added GPL-compatible license headers to PHP files
 * Added update server metadata
