@@ -327,13 +327,7 @@ mod_jtarticlexpro.sys.ini
 
 ![Carousel Layout](screenshots/carousel-layout.png)
 
-### Grid Layout
-
-![Grid Layout](screenshots/grid-layout.png)
-
-### Compact List Layout
-
-![Compact List Layout](screenshots/compact-list-layout.png)
+And much more...
 
 ---
 
