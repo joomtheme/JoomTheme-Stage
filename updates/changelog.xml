@@ -3,10 +3,18 @@
     <changelog>
         <element>mod_jtarticlexpro</element>
         <type>module</type>
-        <version>1.0.13</version>
-        <note>Admin module description now includes JoomTheme and JED Reviews links in both .ini and .sys.ini language files.</note>
-        <changes>
-            <change type="changed">Added JoomTheme and JED Reviews links to the standard module language description used in the module edit screen.</change>
-        </changes>
+        <version>1.0.14</version>
+        <change>
+            <item>Added the manifest XML file to the installer file list.</item>
+            <item>Normalized README layout wording for the Joomla 6.1.1 release.</item>
+        </change>
+        <fix>
+            <item>Hardened JSON-LD output with safe JSON_HEX encoding flags.</item>
+            <item>Normalized schema image URLs to absolute URLs.</item>
+            <item>Updated changelog metadata to the Joomla changelog item format.</item>
+        </fix>
+        <note>
+            <item>Joomla 6.1.1 compatible maintenance release.</item>
+        </note>
     </changelog>
 </changelogs>
