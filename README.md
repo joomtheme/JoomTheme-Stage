@@ -333,6 +333,15 @@ And much more...
 
 ## 📝 Changelog
 
+### v1.0.14
+Improved JSON-LD schema output security
+Converted schema image URLs to absolute URLs
+Added the module XML manifest file to the installer file list
+Updated changelog XML to follow Joomla changelog format
+Cleaned up README structure and layout references
+Updated package version and release metadata
+Joomla 6.1.1 compatibility improvements
+
 ### v1.0.13
 
 * Added GPL-compatible license headers to PHP files
