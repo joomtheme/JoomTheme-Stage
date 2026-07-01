@@ -2,7 +2,7 @@
 
 **JT ArticleX PRO** is a Bootstrap-native advanced article showcase module for **Joomla 6**.
 
-It helps you display Joomla articles in modern layouts such as Carousel, Grid, Compact List, Media List, Featured + List and Magazine without loading unnecessary external CSS or JavaScript libraries.
+It helps you display Joomla articles in modern layouts such as Carousel, Grid, List, Media List, Featured + List and Magazine without loading unnecessary external slider libraries or extra CSS frameworks.
 
 Built by **JoomTheme**
 Website: https://joomtheme.com
@@ -12,9 +12,13 @@ Support: [support@joomtheme.com](mailto:support@joomtheme.com)
 
 ## ✨ Features
 
-* Joomla 6.1.1 compatible
+* Joomla 6 compatible
+* Tested with Joomla 6.1.1
 * Modern Joomla MVC / namespaced module structure
-* Bootstrap-native output
+* Joomla Dependency Injection service provider
+* Bootstrap-native frontend output
+* Joomla WebAsset support
+* Scoped module CSS asset
 * No external carousel library
 * No unnecessary CSS framework dependency
 * Clean Cassiopeia-friendly markup
@@ -25,7 +29,9 @@ Support: [support@joomtheme.com](mailto:support@joomtheme.com)
 * Configurable article info position
 * Turkish and English language files
 * Joomla update server support
-* JED Checker friendly GPL license headers
+* Joomla changelog URL support
+* JED Checker friendly package structure
+* GPL-2.0-or-later license
 
 ---
 
@@ -37,12 +43,13 @@ A modern article carousel using Bootstrap carousel behavior.
 
 Features:
 
-* Premium bottom carousel controls
+* Bootstrap-native carousel output
 * Previous / next arrow buttons
 * Line or dot indicators
 * Configurable autoplay
 * Configurable interval
 * Responsive article columns
+* Improved ARIA labels and accessibility attributes
 * No overlay conflict with title or read more links
 
 ---
@@ -60,7 +67,7 @@ Best for:
 
 ---
 
-### Compact List
+### List
 
 A tight article list layout with small images.
 
@@ -138,7 +145,7 @@ JT ArticleX PRO includes useful but simple options designed not to overwhelm use
 
 ### Carousel Options
 
-* Enable carousel
+* Enable carousel layout
 * Autoplay
 * Interval
 * Show controls
@@ -149,11 +156,13 @@ JT ArticleX PRO includes useful but simple options designed not to overwhelm use
 ### Featured Badge Options
 
 * Show badge on featured image
+
 * Badge type:
 
   * Category
   * Featured
   * Custom Text
+
 * Badge style:
 
   * Primary
@@ -218,7 +227,7 @@ Content → Site Modules
 
 ## 🔄 Update Server
 
-JT ArticleX PRO includes Joomla update server metadata.
+JT ArticleX PRO includes Joomla Update System metadata.
 
 Update XML files are stored in:
 
@@ -234,7 +243,7 @@ updates/
 └── changelog.xml
 ```
 
-The module manifest includes update server and changelog definitions so Joomla can detect future updates.
+The module manifest includes update server and changelog definitions so Joomla can detect future updates and display release notes in the Joomla administrator update interface.
 
 ---
 
@@ -242,6 +251,8 @@ The module manifest includes update server and changelog definitions so Joomla c
 
 ```text
 mod_jtarticlexpro/
+├── LICENSE.txt
+├── README.md
 ├── mod_jtarticlexpro.xml
 ├── services/
 │   └── provider.php
@@ -251,21 +262,31 @@ mod_jtarticlexpro/
 │   └── Helper/
 │       └── ArticleXProHelper.php
 ├── tmpl/
-│   ├── default.php
 │   ├── carousel.php
-│   ├── grid.php
-│   ├── compact.php
-│   ├── media.php
+│   ├── default.php
 │   ├── featured.php
-│   └── magazine.php
-├── language/
-│   ├── en-GB/
-│   │   ├── mod_jtarticlexpro.ini
-│   │   └── mod_jtarticlexpro.sys.ini
-│   └── tr-TR/
-│       ├── mod_jtarticlexpro.ini
-│       └── mod_jtarticlexpro.sys.ini
-└── README.md
+│   ├── grid.php
+│   ├── list.php
+│   ├── magazine.php
+│   ├── media.php
+│   └── partials/
+│       ├── assets.php
+│       ├── card.php
+│       ├── empty.php
+│       ├── featured-badge.php
+│       ├── meta.php
+│       └── schema.php
+├── media/
+│   ├── joomla.asset.json
+│   └── css/
+│       └── site.css
+└── language/
+    ├── en-GB/
+    │   ├── en-GB.mod_jtarticlexpro.ini
+    │   └── en-GB.mod_jtarticlexpro.sys.ini
+    └── tr-TR/
+        ├── tr-TR.mod_jtarticlexpro.ini
+        └── tr-TR.mod_jtarticlexpro.sys.ini
 ```
 
 ---
@@ -278,11 +299,15 @@ JT ArticleX PRO follows the modern Joomla module structure.
 * Uses namespaced PHP classes
 * Uses Joomla module dispatcher structure
 * Uses Joomla helper class structure
+* Uses Joomla Dependency Injection container registration
 * Uses Joomla language files
 * Uses Joomla manifest XML
+* Uses Joomla WebAsset Manager metadata
 * Uses Bootstrap-native markup
-* Avoids unnecessary custom CSS
+* Uses scoped frontend CSS only where needed
 * Avoids external slider libraries
+* Uses safe output escaping in templates
+* Uses strengthened database query bindings for list filters
 
 ---
 
@@ -296,8 +321,10 @@ Included languages:
 Language files:
 
 ```text
-mod_jtarticlexpro.ini
-mod_jtarticlexpro.sys.ini
+en-GB.mod_jtarticlexpro.ini
+en-GB.mod_jtarticlexpro.sys.ini
+tr-TR.mod_jtarticlexpro.ini
+tr-TR.mod_jtarticlexpro.sys.ini
 ```
 
 ---
@@ -306,10 +333,11 @@ mod_jtarticlexpro.sys.ini
 
 | Platform                         | Status    |
 | -------------------------------- | --------- |
-| Joomla 6.1.1                     | Supported |
+| Joomla 6.x                       | Supported |
+| Joomla 6.1.1                     | Tested    |
 | Bootstrap-based Joomla templates | Supported |
 | Cassiopeia                       | Supported |
-| PHP 8.x                          | Supported |
+| PHP 8.2+                         | Supported |
 
 ---
 
@@ -333,14 +361,31 @@ And much more...
 
 ## 📝 Changelog
 
+### v1.0.15
+
+* Added Joomla WebAsset support with `media/joomla.asset.json`
+* Added scoped frontend CSS asset under `media/css/site.css`
+* Reduced inline styling for cleaner template output
+* Improved Bootstrap carousel ARIA labels and accessibility attributes
+* Strengthened database query bindings for article, category, tag and access filters
+* Improved frontend output escaping for date and metadata values
+* Added full GPL-2.0-or-later license text
+* Updated English and Turkish language files
+* Updated Joomla update server metadata
+* Updated Joomla changelog metadata
+* Improved uninstall display name in Joomla administrator messages
+* Cleaned up README package structure and layout references
+* Joomla 6.1.1 maintenance and polish release
+
 ### v1.0.14
-Improved JSON-LD schema output security
-Converted schema image URLs to absolute URLs
-Added the module XML manifest file to the installer file list
-Updated changelog XML to follow Joomla changelog format
-Cleaned up README structure and layout references
-Updated package version and release metadata
-Joomla 6.1.1 compatibility improvements
+
+* Improved JSON-LD schema output security
+* Converted schema image URLs to absolute URLs
+* Added the module XML manifest file to the installer file list
+* Updated changelog XML to follow Joomla changelog format
+* Cleaned up README structure and layout references
+* Updated package version and release metadata
+* Joomla 6.1.1 compatibility improvements
 
 ### v1.0.13
 
