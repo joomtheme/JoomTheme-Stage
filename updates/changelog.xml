@@ -3,6 +3,27 @@
     <changelog>
         <element>mod_jtarticlexpro</element>
         <type>module</type>
+        <version>1.0.15</version>
+        <security>
+            <item>Hardened article, category, tag and access-level IN filters with Joomla query array bindings.</item>
+        </security>
+        <change>
+            <item>Added Joomla Web Asset Manager metadata and moved small layout sizing rules into a scoped CSS file.</item>
+            <item>Updated package metadata for the Joomla 6.1.1 maintenance release.</item>
+            <item>Added the full GPL-2.0 license text to the release package.</item>
+        </change>
+        <fix>
+            <item>Removed inline sizing styles from carousel controls, indicators, badges and thumbnails.</item>
+            <item>Escaped formatted date output in the shared meta partial.</item>
+            <item>Improved carousel accessibility labels and safer autoplay default for new module instances.</item>
+        </fix>
+        <note>
+            <item>Existing module autoplay settings are preserved on upgrade; the new default only affects newly created module instances.</item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>mod_jtarticlexpro</element>
+        <type>module</type>
         <version>1.0.14</version>
         <change>
             <item>Added the manifest XML file to the installer file list.</item>
